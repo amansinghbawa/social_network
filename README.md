@@ -17,6 +17,9 @@ This is a Django Rest Framework-based API for a social networking application. T
 ### Prerequisites
 - Docker
 
+### Configure the Database
+Can Update the postgres DATABASES settings in .env file
+
 ### Run containerise application
 ```commandline
  docker-compose up --build
