@@ -35,10 +35,10 @@ class UserSearchView(generics.ListAPIView):
 
     def get_queryset(self):
         keyword = self.request.query_params.get('keyword', '')
-        user = User.objects.filter(
-            Q(email__iexact=keyword)
-        )
-        if user:
-            return user
-        else:
-            return User.objects.filter(Q(name__icontains=keyword))
+        if '@' in keyword:  # Search by exact email match
+            user = User.objects.filter(
+                Q(email__iexact=keyword)
+            )
+            if user:
+                return user
+        return User.objects.filter(Q(name__icontains=keyword))
