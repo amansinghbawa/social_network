@@ -15,15 +15,50 @@ This is a Django Rest Framework-based API for a social networking application. T
 ## Installation with docker:
 
 ### Prerequisites
-- Docker
 
-### Configure the Database
-Can Update the postgres DATABASES settings in .env file
+Before you begin, ensure you have the following installed on your machine:
 
-### Run containerise application
-```commandline
- docker-compose up --build
+- **Docker**: [Install Docker](https://docs.docker.com/get-docker/)
+- **Docker Compose**: [Install Docker Compose](https://docs.docker.com/compose/install/)
+
+## Getting Started
+
+### Step 1: Clone the Repository
+
+```bash
+git clone https://github.com/SINGHBAWA/social_network.git
+cd social_network
 ```
+
+### Step 2. Environment Variables
+Create a .env file in the root directory of the project to define your environment variables:
+```environment
+POSTGRES_DB=social_network_db
+POSTGRES_USER=social_network_user
+POSTGRES_PASSWORD=your_db_password
+```
+
+### Step 3. Build and Run the Containers
+Use Docker Compose to build and start the containers:
+
+```bash
+docker-compose up --build
+```
+This command will:
+- Build the Docker images for the application.
+- Start the PostgreSQL database service.
+- Start the Django application, running the necessary database migrations and then starting the development server on http://localhost:8000.
+
+### Step 4. Accessing the Application
+Once the containers are up and running, you can access the API via http://localhost:8000.
+
+### Step 5. Stopping the Containers
+To stop the containers, press Ctrl+C in the terminal where the containers are running. Alternatively, you can use the following command:
+```bash
+docker-compose down
+```
+This will stop and remove the containers, but the database volume will persist.
+
 
 ## Installation on local system
 
