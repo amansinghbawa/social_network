@@ -70,9 +70,14 @@ You can use tools like Postman or cURL to interact with the API. The server will
 ## API Endpoints
 [POSTMAN Collection](Social_media_app.postman_collection.json)
 
-###User Management
+### User Management
 - Signup: POST /api/users/signup/
 - Login: POST /api/users/login/
+
+Note: GET TOKEN USING login API and use it to access further APIs in HEADERS.
+```
+Authorization: Bearer <ACCESS TOKEN>
+```
 
 ### User Search
 - Search Users: GET /api/users/search/?keyword=<search_keyword>
