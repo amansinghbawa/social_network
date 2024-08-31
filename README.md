@@ -21,12 +21,10 @@ Before you begin, ensure you have the following installed on your machine:
 - **Docker**: [Install Docker](https://docs.docker.com/get-docker/)
 - **Docker Compose**: [Install Docker Compose](https://docs.docker.com/compose/install/)
 
-## Getting Started
-
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/SINGHBAWA/social_network.git
+git clone git@github.com:amansinghbawa/social_network.git
 cd social_network
 ```
 
@@ -71,7 +69,7 @@ This will stop and remove the containers, but the database volume will persist.
 ### Step 1: Clone the Repository
 
 ```bash
-git clone https://github.com/SINGHBAWA/social_network.git
+git clone git@github.com:amansinghbawa/social_network.git
 cd social_network
 ```
 
